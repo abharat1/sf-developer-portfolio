@@ -1,0 +1,11 @@
+{
+  "packageDirectories": [
+    {
+      "path": "force-app",
+      "default": true
+    }
+  ],
+  "name": "sf-developer-portfolio",
+  "namespace": "",
+  "sourceApiVersion": "60.0"
+}

@@ -1,0 +1,74 @@
+<template>
+    <div class="portfolio-gallery">
+        <div class="gallery-header">
+            <h1>Anshul Bharati — Salesforce Developer Portfolio</h1>
+            <template if:true={visitCount}>
+                <p class="visit-count">👀 {visitCount} views and counting</p>
+            </template>
+        </div>
+
+        <template if:true={errorMessage}>
+            <div class="error-banner">{errorMessage}</div>
+        </template>
+
+        <div class="filter-bar">
+            <template for:each={filterOptions} for:item="option">
+                <button
+                    key={option}
+                    class="filter-pill"
+                    data-filter={option}
+                    onclick={handleFilterChange}
+                >
+                    {option}
+                </button>
+            </template>
+        </div>
+
+        <template if:true={isLoading}>
+            <p>Loading projects...</p>
+        </template>
+
+        <template if:false={isLoading}>
+            <template if:false={hasProjects}>
+                <p>No projects match this filter yet.</p>
+            </template>
+
+            <div class="project-grid">
+                <template for:each={filteredProjects} for:item="project">
+                    <div key={project.Id} class="project-card">
+                        <h2>{project.Name}</h2>
+                        <p class="description">{project.Description__c}</p>
+
+                        <div class="tags">
+                            <template for:each={project.tags} for:item="tag">
+                                <span key={tag} class="tag">{tag}</span>
+                            </template>
+                        </div>
+
+                        <div class="stats">
+                            <span>⭐ {project.Star_Count__c}</span>
+                            <span>{project.Primary_Language__c}</span>
+                            <span>Last commit: {project.formattedLastCommit}</span>
+                        </div>
+
+                        <div class="links">
+                            <a href={project.GitHub_URL__c} target="_blank" rel="noopener">GitHub</a>
+                            <template if:true={project.Live_Demo_URL__c}>
+                                <a href={project.Live_Demo_URL__c} target="_blank" rel="noopener">Live Demo</a>
+                            </template>
+                            <template if:true={canRefreshStats}>
+                                <button
+                                    class="refresh-btn"
+                                    data-id={project.Id}
+                                    onclick={handleRefreshStats}
+                                >
+                                    Refresh Stats
+                                </button>
+                            </template>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </template>
+    </div>
+</template>
