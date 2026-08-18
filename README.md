@@ -6,7 +6,7 @@ Component, enriched with live GitHub stats pulled via an Apex REST callout,
 with real visitor analytics powered by an Apex trigger and async Queueable
 job — publicly hosted on an Experience Cloud site.
 
-**Live site:** resilient-bear-ltto5c-dev-ed.trailblaze.my.site.com
+**Live site:** www.resilient-bear-ltto5c-dev-ed.trailblaze.my.site.com
 **Built by:** [Anshul Bharati](https://github.com/abharat1) — Salesforce Administrator / Developer
 
 ---
