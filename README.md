@@ -1,8 +1,54 @@
 # Salesforce Developer Portfolio Platform
 
-A Salesforce-native developer portfolio: your projects live as records, rendered
-by a Lightning Web Component, enriched with live GitHub stats via an Apex
-callout, with real visitor analytics powered by a trigger + Queueable Apex.
+A Salesforce-native developer portfolio: instead of a static resume site, my
+projects live as actual Salesforce records, rendered by a Lightning Web
+Component, enriched with live GitHub stats pulled via an Apex REST callout,
+with real visitor analytics powered by an Apex trigger and async Queueable
+job — publicly hosted on an Experience Cloud site.
+
+**Live site:** _add your published Experience Cloud URL here_
+**Built by:** [Anshul Bharati](https://github.com/abharat1) — Salesforce Administrator / Developer
+
+---
+
+## Why I built this
+
+I wanted a portfolio that was actually built on the platform I work in every
+day, instead of a generic template site — something that demonstrates the
+full stack of Salesforce development: declarative admin work, Apex,
+async processing, LWC, external integrations, and public-facing security
+configuration, all in one working app.
+
+## What it demonstrates
+
+- **Apex triggers & bulk-safe async processing** — a trigger on visitor logs
+  enqueues a single Queueable per transaction (not one per record), avoiding
+  a classic bulkification bug
+- **REST integration** — an Apex callout to the GitHub API pulls live star
+  counts, primary language, and last-commit date for each project, refreshed
+  on demand
+- **Callout/DML ordering** — the GitHub refresh logic batches all callouts
+  before any database writes, avoiding Salesforce's "uncommitted work
+  pending" error that shows up when callouts and DML are interleaved in a
+  loop
+- **Lightning Web Components** — a filterable project gallery with wired and
+  imperative Apex calls, client-side filtering, and error handling
+  surfaced back to the UI
+- **Public security configuration** — published as a guest-accessible
+  Experience Cloud site under Salesforce's Secure Guest User Record Access
+  model: reads are scoped through a deliberately narrow `without sharing`
+  Apex method (not a broad sharing rule), writes are blocked server-side
+  even if someone calls the Apex method directly, and field-level security
+  is enforced on every query
+- **Test coverage** — `HttpCalloutMock`-based tests covering success,
+  failure, and bulk scenarios, plus assertions on async job behavior
+
+## Tech stack
+
+Apex · Lightning Web Components · SOQL · Named Credentials & External
+Credentials · Queueable Apex · Experience Cloud (LWR) · GitHub REST API
+
+---
 
 ## What's in this repo
 
@@ -20,6 +66,9 @@ force-app/main/default/
 │   ├── VisitorLogTriggerHandlerTest.cls
 │   ├── VisitorAnalyticsQueueable.cls  # async rollup job
 │   └── VisitorAnalyticsQueueable.cls-meta.xml
+├── permissionsets/
+│   └── Portfolio_Full_Access.permissionset-meta.xml
+├── tabs/
 ├── triggers/
 │   └── VisitorLogTrigger.trigger
 └── lwc/
