@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Tech_Stack__c</fullName>
-    <description>Comma-separated tags, e.g. Apex,LWC,Integration</description>
-    <externalId>false</externalId>
     <label>Tech Stack</label>
-    <length>255</length>
-    <required>false</required>
-    <trackTrending>false</trackTrending>
     <type>Text</type>
-    <unique>false</unique>
+    <length>255</length>
+    <description>Comma-separated tags, e.g. Apex,LWC,Integration</description>
 </CustomField>

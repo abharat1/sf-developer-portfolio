@@ -1,93 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Portfolio Full Access</label>
     <description>Grants full object and field-level access to the Project__c and Visitor_Log__c objects used by the developer portfolio app.</description>
-    <externalCredentialPrincipalAccesses>
-        <enabled>true</enabled>
-        <externalCredentialPrincipal>GitHub_No_Auth-GitHubPrincipal</externalCredentialPrincipal>
-    </externalCredentialPrincipalAccesses>
+
+    <objectPermissions>
+        <object>Project__c</object>
+        <allowCreate>true</allowCreate>
+        <allowRead>true</allowRead>
+        <allowEdit>true</allowEdit>
+        <allowDelete>true</allowDelete>
+        <viewAllRecords>true</viewAllRecords>
+        <modifyAllRecords>true</modifyAllRecords>
+    </objectPermissions>
+
+    <objectPermissions>
+        <object>Visitor_Log__c</object>
+        <allowCreate>true</allowCreate>
+        <allowRead>true</allowRead>
+        <allowEdit>true</allowEdit>
+        <allowDelete>true</allowDelete>
+        <viewAllRecords>true</viewAllRecords>
+        <modifyAllRecords>true</modifyAllRecords>
+    </objectPermissions>
+
     <fieldPermissions>
-        <editable>true</editable>
         <field>Project__c.Description__c</field>
         <readable>true</readable>
+        <editable>true</editable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>Project__c.Display_Order__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Project__c.GitHub_Repo_Path__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Project__c.GitHub_URL__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Project__c.Last_Commit_Date__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Project__c.Live_Demo_URL__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Project__c.Primary_Language__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Project__c.Star_Count__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Project__c.Tech_Stack__c</field>
         <readable>true</readable>
+        <editable>true</editable>
     </fieldPermissions>
     <fieldPermissions>
+        <field>Project__c.GitHub_URL__c</field>
+        <readable>true</readable>
         <editable>true</editable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <field>Project__c.GitHub_Repo_Path__c</field>
+        <readable>true</readable>
+        <editable>true</editable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <field>Project__c.Live_Demo_URL__c</field>
+        <readable>true</readable>
+        <editable>true</editable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <field>Project__c.Star_Count__c</field>
+        <readable>true</readable>
+        <editable>true</editable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <field>Project__c.Last_Commit_Date__c</field>
+        <readable>true</readable>
+        <editable>true</editable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <field>Project__c.Primary_Language__c</field>
+        <readable>true</readable>
+        <editable>true</editable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <field>Project__c.Display_Order__c</field>
+        <readable>true</readable>
+        <editable>true</editable>
+    </fieldPermissions>
+
+    <fieldPermissions>
         <field>Visitor_Log__c.Page_Viewed__c</field>
         <readable>true</readable>
+        <editable>true</editable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>Visitor_Log__c.Referrer__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Visitor_Log__c.Session_Id__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Visitor_Log__c.Visited_Date__c</field>
         <readable>true</readable>
+        <editable>true</editable>
     </fieldPermissions>
-    <hasActivationRequired>false</hasActivationRequired>
-    <label>Portfolio Full Access</label>
-    <objectPermissions>
-        <allowCreate>true</allowCreate>
-        <allowDelete>true</allowDelete>
-        <allowEdit>true</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>true</modifyAllRecords>
-        <object>Project__c</object>
-        <viewAllRecords>true</viewAllRecords>
-    </objectPermissions>
-    <objectPermissions>
-        <allowCreate>true</allowCreate>
-        <allowDelete>true</allowDelete>
-        <allowEdit>true</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>true</modifyAllRecords>
-        <object>Visitor_Log__c</object>
-        <viewAllRecords>true</viewAllRecords>
-    </objectPermissions>
+    <fieldPermissions>
+        <field>Visitor_Log__c.Referrer__c</field>
+        <readable>true</readable>
+        <editable>true</editable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <field>Visitor_Log__c.Session_Id__c</field>
+        <readable>true</readable>
+        <editable>true</editable>
+    </fieldPermissions>
+
+    <tabSettings>
+        <tab>Project__c</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>Visitor_Log__c</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+
+    <classAccesses>
+        <apexClass>ProjectLookupAction</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>PortfolioDataService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>GetProjectDetailsAction</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>GetTechStackAction</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>GetGitHubReposAction</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
 </PermissionSet>

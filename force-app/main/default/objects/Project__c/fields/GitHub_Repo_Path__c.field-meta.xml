@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>GitHub_Repo_Path__c</fullName>
-    <description>owner/repo format used for GitHub API calls, e.g. abharat1/TFAcrobot</description>
-    <externalId>false</externalId>
     <label>GitHub Repo Path</label>
-    <length>255</length>
-    <required>false</required>
-    <trackTrending>false</trackTrending>
     <type>Text</type>
-    <unique>false</unique>
+    <length>255</length>
+    <description>owner/repo format used for GitHub API calls, e.g. abharat1/TFAcrobot</description>
 </CustomField>
