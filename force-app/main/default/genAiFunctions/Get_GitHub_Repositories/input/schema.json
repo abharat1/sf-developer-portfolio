@@ -1,0 +1,13 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "filterKeyword" : {
+      "title" : "Filter Keyword",
+      "description" : "Optional keyword to filter repositories by project name or technology, e.g. \"Python\" or \"portfolio\". Leave blank to list all repositories.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

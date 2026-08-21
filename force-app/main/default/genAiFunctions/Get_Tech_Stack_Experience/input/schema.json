@@ -1,0 +1,14 @@
+{
+  "required" : [ "technology" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "technology" : {
+      "title" : "Technology",
+      "description" : "A specific technology, language, or framework to check for in Anshul Bharati experience, e.g. \"Apex\", \"Python\", \"LWC\", \"REST API\".",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

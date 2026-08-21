@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Retrieves full details about one or more technical projects belonging to Anshul Bharati, including description, tech stack, GitHub link, and live demo link. Use when a visitor asks about a specific project or what Anshul has built.</description>
+    <developerName>Get_Project_Details</developerName>
+    <invocationTarget>GetProjectDetailsAction</invocationTarget>
+    <invocationTargetType>apex</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <localDeveloperName>Get_Project_Details</localDeveloperName>
+    <masterLabel>Get Project Details</masterLabel>
+    <progressIndicatorMessage>Pulling up project details...</progressIndicatorMessage>
+</GenAiFunction>

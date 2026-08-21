@@ -1,0 +1,13 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "projectName" : {
+      "title" : "Project Name or Keyword",
+      "description" : "Name or keyword identifying which project to get details about, e.g. \"portfolio platform\" or \"TensorFlow Acrobot\". Leave blank to list all projects.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Answers questions about which technologies, languages, or frameworks Anshul Bharati has experience with, and which projects used them. Use when a visitor asks about a specific technology or Anshul Bharati skills in general.</description>
+    <developerName>Get_Tech_Stack_Experience</developerName>
+    <invocationTarget>GetTechStackAction</invocationTarget>
+    <invocationTargetType>apex</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <localDeveloperName>Get_Tech_Stack_Experience</localDeveloperName>
+    <masterLabel>Get Tech Stack Experience</masterLabel>
+    <progressIndicatorMessage>Checking Anshul&apos;s experience with that...</progressIndicatorMessage>
+</GenAiFunction>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Lists public GitHub repositories belonging to Anshul Bharati, with links, optionally filtered by keyword. Use when a visitor asks to see his code, repositories, or GitHub profile.</description>
+    <developerName>Get_GitHub_Repositories</developerName>
+    <invocationTarget>GetGitHubReposAction</invocationTarget>
+    <invocationTargetType>apex</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <localDeveloperName>Get_GitHub_Repositories</localDeveloperName>
+    <masterLabel>Get GitHub Repositories</masterLabel>
+    <progressIndicatorMessage>Looking up GitHub repositories...</progressIndicatorMessage>
+</GenAiFunction>
