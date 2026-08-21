@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Session_Id__c</fullName>
+    <description>Client-generated identifier so repeat views in one session aren&apos;t double counted</description>
+    <externalId>false</externalId>
     <label>Session Id</label>
-    <type>Text</type>
     <length>100</length>
-    <description>Client-generated identifier so repeat views in one session aren't double counted</description>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
 </CustomField>

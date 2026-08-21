@@ -78,4 +78,3 @@ public without sharing class ProjectController {
         return [SELECT COUNT() FROM Visitor_Log__c];
     }
 }
-
